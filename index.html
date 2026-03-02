@@ -24,7 +24,6 @@
   html { scroll-behavior: smooth; }
   body { background: var(--cream); color: var(--dark); font-family: var(--font-sans); font-weight: 300; overflow-x: hidden; }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -39,9 +38,7 @@
   nav ul a { text-decoration: none; color: var(--dark); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
   nav ul a:hover { color: var(--green); }
   .nav-cta { background: var(--green); color: var(--cream) !important; padding: 0.55rem 1.4rem; border-radius: 2px; }
-  .nav-cta:hover { background: var(--green-light); }
 
-  /* HERO */
   .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
   .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 8rem 4rem 4rem 6rem; background: var(--cream); position: relative; z-index: 2; }
   .hero-tag { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; font-weight: 500; }
@@ -55,36 +52,28 @@
   .btn-outline:hover { background: var(--earth); color: var(--cream); }
 
   .hero-right { position: relative; overflow: hidden; }
-  .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-  .hero-right-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to right, rgba(245,240,232,0.15) 0%, transparent 30%),
-                linear-gradient(to top, rgba(28,26,20,0.5) 0%, transparent 50%);
-  }
-  .hero-badge { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--dark); padding: 0.7rem 1.8rem; border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; white-space: nowrap; z-index: 2; }
+  .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+  .hero-right-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(245,240,232,0.15) 0%, transparent 30%), linear-gradient(to top, rgba(28,26,20,0.5) 0%, transparent 50%); }
+  .hero-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; background: var(--gold); color: var(--dark); padding: 0.7rem 1.8rem; border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; white-space: nowrap; z-index: 2; }
 
-  /* STATS BAND */
   .stats-band { background: var(--dark); display: grid; grid-template-columns: repeat(4,1fr); }
   .stats-band-item { padding: 2rem; text-align: center; border-right: 1px solid rgba(245,240,232,0.06); }
   .stats-band-item:last-child { border: none; }
   .stat-num { font-family: var(--font-serif); font-size: 2.5rem; color: var(--gold); display: block; line-height: 1; }
   .stat-label { font-size: 0.72rem; color: rgba(245,240,232,0.55); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.4rem; display: block; }
 
-  /* TICKER */
   .ticker { background: var(--green); padding: 0.9rem 0; overflow: hidden; white-space: nowrap; }
   .ticker-inner { display: inline-flex; gap: 3rem; animation: ticker 25s linear infinite; }
   .ticker-inner span { color: rgba(245,240,232,0.8); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; }
   .ticker-inner span.sep { color: var(--gold); }
   @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* SECTION BASE */
   section { padding: 7rem 6rem; }
   .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 500; }
   .section-title { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem; }
   .section-title em { color: var(--green); font-style: italic; }
   .section-text { font-size: 1rem; line-height: 1.8; color: var(--muted); max-width: 560px; }
 
-  /* WALTER SECTION */
   .walter { background: var(--cream); }
   .walter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
   .walter-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -95,30 +84,27 @@
   .walter-quote blockquote { font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--dark); line-height: 1.6; }
   .walter-quote cite { display: block; margin-top: 0.75rem; font-size: 0.78rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* FERME AERIENNE */
   .ferme-banner { position: relative; height: 520px; overflow: hidden; }
-  .ferme-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .ferme-banner img { width: 100%; height: 100%; object-fit: cover; }
   .ferme-banner-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(28,26,20,0.75) 100%); }
   .ferme-banner-text { position: absolute; bottom: 3rem; left: 6rem; color: var(--cream); }
   .ferme-banner-text h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem; }
   .ferme-banner-text p { font-size: 0.9rem; color: rgba(245,240,232,0.7); }
 
-  /* PHILOSOPHY */
   .philosophy { background: var(--dark); color: var(--cream); }
   .philosophy .section-title { color: var(--cream); }
   .philosophy .section-text { color: rgba(245,240,232,0.65); }
   .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
   .philosophy-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
-  .pillar { border: 1px solid rgba(200,150,62,0.25); padding: 1.5rem; border-radius: 4px; transition: border-color 0.2s, background 0.2s; }
+  .pillar { border: 1px solid rgba(200,150,62,0.25); padding: 1.5rem; border-radius: 4px; transition: border-color 0.2s; }
   .pillar:hover { border-color: var(--gold); background: rgba(200,150,62,0.04); }
   .pillar-icon { font-size: 1.8rem; margin-bottom: 0.75rem; display: block; }
   .pillar h4 { font-family: var(--font-serif); font-size: 1rem; color: var(--cream); margin-bottom: 0.5rem; }
   .pillar p { font-size: 0.83rem; color: rgba(245,240,232,0.5); line-height: 1.6; }
-  .philosophy-img { position: relative; }
   .philosophy-img img { width: 100%; border-radius: 4px; object-fit: cover; height: 500px; }
-  .philosophy-img-caption { position: absolute; bottom: 1rem; left: 1rem; right: 1rem; background: rgba(28,26,20,0.8); padding: 1rem 1.2rem; border-radius: 4px; font-size: 0.82rem; color: rgba(245,240,232,0.8); }
-
-  /* PRODUCTIONS */
+  .philosophy-img-caption { margin-top: 0.75rem; font-size: 0.82rem; color: rgba(245,240,232,0.5); }
+</style>
+<style>
   .productions { background: var(--sand); }
   .productions-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
   .prod-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
@@ -136,7 +122,6 @@
   .prod-card-body p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
   .prod-tag { display: inline-block; margin-top: 0.75rem; background: var(--sand); color: var(--earth); font-size: 0.7rem; padding: 0.3rem 0.8rem; border-radius: 20px; letter-spacing: 0.06em; text-transform: uppercase; }
 
-  /* BOUTIQUE */
   .boutique { background: var(--cream); }
   .boutique-intro { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; margin-bottom: 4rem; align-items: start; }
   .boutique-note { background: var(--green); color: var(--cream); padding: 1.5rem 2rem; border-radius: 4px; font-size: 0.88rem; line-height: 1.7; }
@@ -151,7 +136,6 @@
   .shop-price { font-family: var(--font-serif); font-size: 1rem; color: var(--earth); font-weight: 700; white-space: nowrap; margin-left: 0.75rem; }
   .shop-seasonal { background: var(--gold); color: var(--dark); padding: 0.25rem 0.75rem; border-radius: 2px; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
 
-  /* OEUFS HIGHLIGHT */
   .oeufs-band { background: var(--dark); padding: 4rem 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
   .oeufs-band h2 { font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--cream); line-height: 1.2; margin-bottom: 1rem; }
   .oeufs-band h2 em { color: var(--gold); font-style: italic; }
@@ -161,7 +145,6 @@
   .oeufs-price-tag .unit { font-size: 0.85rem; letter-spacing: 0.06em; }
   .oeufs-icon { font-size: 5rem; text-align: center; }
 
-  /* ECOLOGIE */
   .ecologie { background: var(--green); color: var(--cream); }
   .ecologie .section-label { color: var(--gold); }
   .ecologie .section-title { color: var(--cream); }
@@ -173,7 +156,6 @@
   .eco-card h4 { font-family: var(--font-serif); font-size: 1rem; color: var(--cream); margin-bottom: 0.5rem; }
   .eco-card p { font-size: 0.82rem; color: rgba(245,240,232,0.55); line-height: 1.6; }
 
-  /* CONTACT */
   .contact { background: var(--sand); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
   .visite-info { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
@@ -182,7 +164,6 @@
   .visite-row h4 { font-size: 0.88rem; font-weight: 500; margin-bottom: 0.2rem; }
   .visite-row p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
   .visite-row a { color: var(--green); text-decoration: none; }
-  .contact-photo { border-radius: 4px; overflow: hidden; }
   .contact-photo img { width: 100%; height: 420px; object-fit: cover; object-position: center; border-radius: 4px; }
   .hours-box { background: var(--dark); color: var(--cream); padding: 1.5rem 2rem; border-radius: 4px; margin-top: 1.5rem; }
   .hours-box h4 { font-family: var(--font-serif); font-size: 1rem; color: var(--gold); margin-bottom: 1rem; }
@@ -191,15 +172,12 @@
   .hours-row span:first-child { color: rgba(245,240,232,0.5); }
   .hours-row span:last-child { color: var(--gold); font-family: var(--font-serif); }
 
-  /* FOOTER */
-  footer { background: #0F0E0A; color: rgba(245,240,232,0.35); padding: 2rem 6rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; letter-spacing: 0.04em; border-top: 1px solid rgba(245,240,232,0.06); }
+  footer { background: #0F0E0A; color: rgba(245,240,232,0.35); padding: 2rem 6rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; }
   footer a { color: var(--gold); text-decoration: none; }
 
-  /* ANIMATIONS */
   .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
     nav ul { display: none; }
@@ -212,7 +190,8 @@
     .eco-grid { grid-template-columns: 1fr 1fr; }
     .stats-band { grid-template-columns: 1fr 1fr; }
     .oeufs-band { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
-    .ferme-banner-text { left: 1.5rem; }
+    .ferme-banner { height: 300px; }
+    .ferme-banner-text { left: 1.5rem; bottom: 1.5rem; }
     .productions-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
     footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
     .walter-photos img:first-child { height: 280px; }
@@ -222,7 +201,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">La <span>Vignette</span></div>
   <ul>
@@ -234,7 +212,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" style="padding:0">
   <div class="hero-left">
     <p class="hero-tag">Ferme familiale · Montherod, Vaud</p>
@@ -252,7 +229,6 @@
   </div>
 </section>
 
-<!-- STATS BAND -->
 <div class="stats-band">
   <div class="stats-band-item"><span class="stat-num">20+</span><span class="stat-label">Ans de sélection</span></div>
   <div class="stats-band-item"><span class="stat-num">40+</span><span class="stat-label">Hectares</span></div>
@@ -260,7 +236,6 @@
   <div class="stats-band-item"><span class="stat-num">0</span><span class="stat-label">Labour</span></div>
 </div>
 
-<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-inner">
     <span>Sols vivants</span><span class="sep">·</span>
@@ -280,14 +255,13 @@
   </div>
 </div>
 
-<!-- WALTER -->
 <section class="walter" id="walter">
   <div class="walter-grid">
     <div class="fade-in">
       <div class="walter-photos">
-        <img src="images/IMG_0219.jpeg" alt="Walter Steiner appuyé sur sa clôture">
-        <img src="images/IMG_0218.jpeg" alt="Walter Steiner assis sur la clôture">
-        <img src="images/IMG_0217.jpeg" alt="Walter Steiner sur le chemin de la ferme">
+        <img src="images/IMG_0219.jpeg" alt="Walter Steiner">
+        <img src="images/IMG_0218.jpeg" alt="Walter Steiner">
+        <img src="images/IMG_0217.jpeg" alt="Walter Steiner">
       </div>
     </div>
     <div class="fade-in">
@@ -303,54 +277,34 @@
   </div>
 </section>
 
-<!-- FERME AERIENNE -->
 <div class="ferme-banner fade-in">
-  <img src="images/IMG_7989.jpeg" alt="Vue aérienne de la ferme La Vignette à Montherod">
+  <img src="images/IMG_7989.jpeg" alt="Vue aérienne de la ferme La Vignette">
   <div class="ferme-banner-overlay"></div>
   <div class="ferme-banner-text">
     <h3>La Vignette, Montherod</h3>
-    <p>Vue aérienne de l'exploitation · Les panneaux solaires rendent la ferme autonome en énergie</p>
+    <p>Vue aérienne · Les panneaux solaires rendent la ferme autonome en énergie</p>
   </div>
 </div>
 
-<!-- PHILOSOPHIE -->
 <section class="philosophy" id="philosophie">
   <div class="philosophy-grid">
     <div>
       <p class="section-label">Notre philosophie</p>
       <h2 class="section-title">Vivre du sol<br><em>sans l'épuiser</em></h2>
-      <p class="section-text">Walter ne laboure jamais ses terres. Depuis plus de 20 ans, il laisse la vie souterraine — vers de terre, champignons, micro-organismes — faire son œuvre. Le résultat est visible : un sol d'une richesse exceptionnelle, démontré lors de visites comparatives avec le Parc Jura Vaudois en septembre 2024.</p>
+      <p class="section-text">Walter ne laboure jamais ses terres. Depuis plus de 20 ans, il laisse la vie souterraine faire son œuvre. Le résultat est visible : un sol d'une richesse exceptionnelle, démontré lors de visites avec le Parc Jura Vaudois en septembre 2024.</p>
       <div class="philosophy-pillars">
-        <div class="pillar">
-          <span class="pillar-icon">🌱</span>
-          <h4>Sols vivants</h4>
-          <p>Pas de labour. Taux de vie exceptionnel, comparé publiquement avec une parcelle voisine en agriculture traditionnelle.</p>
-        </div>
-        <div class="pillar">
-          <span class="pillar-icon">🌳</span>
-          <h4>Agroforesterie</h4>
-          <p>Arbres et cultures en harmonie pour une biodiversité maximale et des terres plus résilientes.</p>
-        </div>
-        <div class="pillar">
-          <span class="pillar-icon">🔬</span>
-          <h4>Sélection génétique</h4>
-          <p>20 ans de sélection sur ses bœufs Angus pour une qualité gustative et nutritive exceptionnelle.</p>
-        </div>
-        <div class="pillar">
-          <span class="pillar-icon">👨‍👩‍👧‍👦</span>
-          <h4>Engagement familial</h4>
-          <p>Tout ce que produit la ferme est consommé par Walter, sa femme et leurs 5 enfants.</p>
-        </div>
+        <div class="pillar"><span class="pillar-icon">🌱</span><h4>Sols vivants</h4><p>Pas de labour. Taux de vie exceptionnel, comparé publiquement avec une parcelle voisine.</p></div>
+        <div class="pillar"><span class="pillar-icon">🌳</span><h4>Agroforesterie</h4><p>Arbres et cultures en harmonie pour une biodiversité maximale.</p></div>
+        <div class="pillar"><span class="pillar-icon">🔬</span><h4>Sélection génétique</h4><p>20 ans de sélection sur ses bœufs Angus pour une qualité gustative exceptionnelle.</p></div>
+        <div class="pillar"><span class="pillar-icon">👨‍👩‍👧‍👦</span><h4>Engagement familial</h4><p>Tout ce que produit la ferme est consommé par Walter, sa femme et leurs 5 enfants.</p></div>
       </div>
     </div>
     <div class="philosophy-img fade-in">
-      <img src="images/IMG_0220.jpeg" alt="Walter Steiner marchant dans ses champs">
-      <div class="philosophy-img-caption">Walter dans ses prairies non labourées — la biodiversité visible à l'œil nu</div>
+      <img src="images/IMG_0220.jpeg" alt="Walter dans ses champs">
+      <div class="philosophy-img-caption">Walter dans ses prairies non labourées</div>
     </div>
   </div>
 </section>
-
-<!-- PRODUCTIONS -->
 <section class="productions" id="productions">
   <div class="productions-header">
     <div>
@@ -362,236 +316,137 @@
   <div class="prod-grid">
     <div class="prod-card fade-in">
       <div class="prod-card-top green-bg">🐄</div>
-      <div class="prod-card-body">
-        <h3>Bœufs Angus</h3>
-        <p>20 ans de sélection génétique pour une viande d'exception. Élevés sur les prairies de la ferme, nourris aux productions maison.</p>
-        <span class="prod-tag">Élevage raisonné</span>
-      </div>
+      <div class="prod-card-body"><h3>Bœufs Angus</h3><p>20 ans de sélection génétique pour une viande d'exception. Élevés sur les prairies, nourris aux productions maison.</p><span class="prod-tag">Élevage raisonné</span></div>
     </div>
     <div class="prod-card fade-in">
       <div class="prod-card-top earth-bg">🐷</div>
-      <div class="prod-card-body">
-        <h3>Cochons Duroc</h3>
-        <p>Race réputée pour la qualité gustative de sa viande. Nourris avec les céréales non traitées de la ferme.</p>
-        <span class="prod-tag">Alimentation maison</span>
-      </div>
+      <div class="prod-card-body"><h3>Cochons Duroc</h3><p>Race réputée pour la qualité gustative. Nourris avec les céréales non traitées de la ferme.</p><span class="prod-tag">Alimentation maison</span></div>
     </div>
     <div class="prod-card fade-in">
       <div class="prod-card-top gold-bg">🐔</div>
-      <div class="prod-card-body">
-        <h3>Poules plein champ</h3>
-        <p>Structure mobile déplacée régulièrement pour garantir un accès à l'herbe fraîche. Les poules fertilisent les sols au passage.</p>
-        <span class="prod-tag">Œufs plein champ</span>
-      </div>
+      <div class="prod-card-body"><h3>Poules plein champ</h3><p>Structure mobile déplacée régulièrement pour un accès permanent à l'herbe fraîche. Fertilisation naturelle des sols.</p><span class="prod-tag">Œufs plein champ</span></div>
     </div>
     <div class="prod-card fade-in">
       <div class="prod-card-top olive-bg">🌻</div>
-      <div class="prod-card-body">
-        <h3>Oléagineux & céréales</h3>
-        <p>Tournesol, colza, sarrasin, épeautre, millet, quinoa… Transformés sur place en huile et farine grâce au moulin de la ferme.</p>
-        <span class="prod-tag">Transformation sur place</span>
-      </div>
+      <div class="prod-card-body"><h3>Oléagineux & céréales</h3><p>Tournesol, colza, sarrasin, épeautre, millet, quinoa… Transformés sur place en huile et farine.</p><span class="prod-tag">Transformation sur place</span></div>
     </div>
     <div class="prod-card fade-in">
       <div class="prod-card-top sand-bg">🫘</div>
-      <div class="prod-card-body">
-        <h3>Légumineuses vaudoises</h3>
-        <p>Lentilles, pois chiches, haricots rouges, pois jaunes. Nettoyées avec un trieur optique dernière génération.</p>
-        <span class="prod-tag">Terroir vaudois</span>
-      </div>
+      <div class="prod-card-body"><h3>Légumineuses vaudoises</h3><p>Lentilles, pois chiches, haricots rouges, pois jaunes. Nettoyées avec un trieur optique dernière génération.</p><span class="prod-tag">Terroir vaudois</span></div>
     </div>
     <div class="prod-card fade-in">
       <div class="prod-card-top dark-bg">🌰 🍯</div>
-      <div class="prod-card-body">
-        <h3>Châtaignes & miel</h3>
-        <p>L'un des rares producteurs de châtaignes vaudois (depuis 25 ans). Apiculteur passionné, Walter entretient également ses ruches.</p>
-        <span class="prod-tag">Apiculture · Fruits</span>
-      </div>
+      <div class="prod-card-body"><h3>Châtaignes & miel</h3><p>L'un des rares producteurs de châtaignes vaudois depuis 25 ans. Apiculteur passionné.</p><span class="prod-tag">Apiculture · Fruits</span></div>
     </div>
   </div>
 </section>
 
-<!-- OEUFS HIGHLIGHT -->
 <div class="oeufs-band">
   <div class="fade-in">
-    <p style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; font-weight:500">Notre spécialité</p>
+    <p style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-weight:500">Notre spécialité</p>
     <h2>Œufs de poules<br><em>en plein champ</em></h2>
-    <p>Nos poules évoluent librement sur les prairies de la ferme. Leur poulailler mobile est déplacé régulièrement pour qu'elles aient toujours accès à de l'herbe fraîche — et pour qu'elles fertilisent naturellement les sols au passage. Des œufs d'une qualité et d'une saveur incomparables.</p>
-    <div class="oeufs-price-tag">
-      <span class="price">0.60</span>
-      <span class="unit">CHF / œuf</span>
-    </div>
+    <p>Nos poules évoluent librement sur les prairies. Leur poulailler mobile est déplacé régulièrement pour qu'elles aient toujours accès à de l'herbe fraîche — et fertilisent naturellement les sols.</p>
+    <div class="oeufs-price-tag"><span class="price">0.60</span><span class="unit">CHF / œuf</span></div>
   </div>
   <div class="oeufs-icon fade-in">🥚</div>
 </div>
 
-<!-- BOUTIQUE -->
 <section class="boutique" id="boutique">
   <div class="boutique-intro">
     <div>
       <p class="section-label">Magasin libre-service</p>
       <h2 class="section-title">Ouvert <em>7j/7</em></h2>
-      <div class="boutique-note">
-        <strong>7h – 22h, tous les jours</strong>
-        Local de vente en accès libre à la ferme. Produits de saison disponibles selon les récoltes.
-      </div>
+      <div class="boutique-note"><strong>7h – 22h, tous les jours</strong>Local de vente en accès libre à la ferme.</div>
     </div>
     <div class="shop-categories">
       <div>
         <p class="shop-cat-title">🥚 Œufs</p>
         <div class="shop-grid">
-          <div class="shop-item">
-            <div><div class="shop-item-name">Œufs plein champ</div><div class="shop-item-badge">Poules sur prairie</div></div>
-            <span class="shop-price">0.60 / pce</span>
-          </div>
+          <div class="shop-item"><div><div class="shop-item-name">Œufs plein champ</div><div class="shop-item-badge">Poules sur prairie</div></div><span class="shop-price">0.60 / pce</span></div>
         </div>
       </div>
       <div>
         <p class="shop-cat-title">🫙 Huiles (en vrac)</p>
         <div class="shop-grid">
-          <div class="shop-item">
-            <div><div class="shop-item-name">Huile de tournesol</div><div class="shop-item-badge">En vrac · / litre</div></div>
-            <span class="shop-price">8.–</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Huile de colza</div><div class="shop-item-badge">En vrac · / litre</div></div>
-            <span class="shop-price">8.–</span>
-          </div>
+          <div class="shop-item"><div><div class="shop-item-name">Huile de tournesol</div><div class="shop-item-badge">/ litre</div></div><span class="shop-price">8.–</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Huile de colza</div><div class="shop-item-badge">/ litre</div></div><span class="shop-price">8.–</span></div>
         </div>
       </div>
       <div>
         <p class="shop-cat-title">🌾 Farines & céréales</p>
         <div class="shop-grid">
-          <div class="shop-item">
-            <div><div class="shop-item-name">Farine de sarrasin</div><div class="shop-item-badge">/ kg</div></div>
-            <span class="shop-price">6.–</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Millet vaudois</div><div class="shop-item-badge">500g</div></div>
-            <span class="shop-price">5.–</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Farine d'épeautre complète</div><div class="shop-item-badge">Sac 5 kg</div></div>
-            <span class="shop-price">17.–</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Farine de blé claire</div><div class="shop-item-badge">Sac 5 kg</div></div>
-            <span class="shop-price">12.–</span>
-          </div>
+          <div class="shop-item"><div><div class="shop-item-name">Farine de sarrasin</div><div class="shop-item-badge">/ kg</div></div><span class="shop-price">6.–</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Millet vaudois</div><div class="shop-item-badge">500g</div></div><span class="shop-price">5.–</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Farine d'épeautre complète</div><div class="shop-item-badge">Sac 5 kg</div></div><span class="shop-price">17.–</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Farine de blé claire</div><div class="shop-item-badge">Sac 5 kg</div></div><span class="shop-price">12.–</span></div>
         </div>
       </div>
       <div>
         <p class="shop-cat-title">🫘 Légumineuses vaudoises</p>
         <div class="shop-grid">
-          <div class="shop-item">
-            <div><div class="shop-item-name">Lentilles vertes</div><div class="shop-item-badge">500g · ou 8.– / kg</div></div>
-            <span class="shop-price">5.–</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Haricots rouges</div><div class="shop-item-badge">500g · ou 10.– / kg</div></div>
-            <span class="shop-price">5.50</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Pois chiches</div><div class="shop-item-badge">500g · ou 8.– / kg</div></div>
-            <span class="shop-price">5.–</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Pois jaunes cassés</div><div class="shop-item-badge">500g · ou 4.50 / kg</div></div>
-            <span class="shop-price">3.50</span>
-          </div>
+          <div class="shop-item"><div><div class="shop-item-name">Lentilles vertes</div><div class="shop-item-badge">500g · ou 8.– / kg</div></div><span class="shop-price">5.–</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Haricots rouges</div><div class="shop-item-badge">500g · ou 10.– / kg</div></div><span class="shop-price">5.50</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Pois chiches</div><div class="shop-item-badge">500g · ou 8.– / kg</div></div><span class="shop-price">5.–</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Pois jaunes cassés</div><div class="shop-item-badge">500g · ou 4.50 / kg</div></div><span class="shop-price">3.50</span></div>
         </div>
       </div>
       <div>
         <p class="shop-cat-title">🌱 Graines</p>
         <div class="shop-grid">
-          <div class="shop-item">
-            <div><div class="shop-item-name">Graines de tournesol</div><div class="shop-item-badge">400g · ou 11.– / kg</div></div>
-            <span class="shop-price">~5.–</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Graines de lin</div><div class="shop-item-badge">/ kg</div></div>
-            <span class="shop-price">10.–</span>
-          </div>
-          <div class="shop-item">
-            <div><div class="shop-item-name">Colza</div><div class="shop-item-badge">/ 100g</div></div>
-            <span class="shop-price">1.50</span>
-          </div>
+          <div class="shop-item"><div><div class="shop-item-name">Graines de tournesol</div><div class="shop-item-badge">400g · ou 11.– / kg</div></div><span class="shop-price">~5.–</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Graines de lin</div><div class="shop-item-badge">/ kg</div></div><span class="shop-price">10.–</span></div>
+          <div class="shop-item"><div><div class="shop-item-name">Colza</div><div class="shop-item-badge">/ 100g</div></div><span class="shop-price">1.50</span></div>
         </div>
       </div>
       <div>
         <p class="shop-cat-title">🎃 Courges — de saison</p>
         <div class="shop-grid">
-          <div class="shop-item">
-            <div><div class="shop-item-name">Butternut, Potimarron, Pâtisson…</div><div class="shop-item-badge">Variétés selon saison</div></div>
-            <span class="shop-seasonal">Saison</span>
-          </div>
+          <div class="shop-item"><div><div class="shop-item-name">Butternut, Potimarron, Pâtisson…</div><div class="shop-item-badge">Variétés selon saison</div></div><span class="shop-seasonal">Saison</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ECOLOGIE -->
 <section class="ecologie" id="ecologie">
   <p class="section-label">Engagement environnemental</p>
   <h2 class="section-title">Une ferme qui <em>rend plus</em><br>qu'elle ne prend</h2>
-  <p class="section-text" style="max-width:680px">Chaque choix à La Vignette est pensé pour préserver les ressources naturelles, enrichir la biodiversité et transmettre des terres en meilleur état qu'elles ont été reçues.</p>
+  <p class="section-text" style="max-width:680px">Chaque choix à La Vignette est pensé pour préserver les ressources naturelles et transmettre des terres en meilleur état.</p>
   <div class="eco-grid">
-    <div class="eco-card fade-in"><span class="eco-icon">☀️</span><h4>Énergie solaire</h4><p>Panneaux photovoltaïques — ferme autonome et neutre carbone. Surplus revendu à la SEFA voisine.</p></div>
-    <div class="eco-card fade-in"><span class="eco-icon">🪱</span><h4>Sols sans labour</h4><p>Taux de vie du sol exceptionnel. Comparé publiquement avec une parcelle voisine lors de la visite du Parc Jura Vaudois (sept. 2024).</p></div>
-    <div class="eco-card fade-in"><span class="eco-icon">💧</span><h4>Eau naturelle</h4><p>Un cours d'eau traverse les terrains, alimentation naturelle et renouvelable pour l'exploitation.</p></div>
-    <div class="eco-card fade-in"><span class="eco-icon">🌳</span><h4>Agroforesterie</h4><p>Arbres et cultures associés pour maximiser la biodiversité et la résilience des écosystèmes.</p></div>
-    <div class="eco-card fade-in"><span class="eco-icon">♻️</span><h4>Circuit fermé</h4><p>Les céréales nourrissent les animaux. Les animaux fertilisent les sols. Les sols nourrissent les céréales.</p></div>
-    <div class="eco-card fade-in"><span class="eco-icon">🔬</span><h4>Tri haute précision</h4><p>Trieur optique dernière génération — élimination des moisissures, corps étrangers et grains défectueux.</p></div>
-    <div class="eco-card fade-in"><span class="eco-icon">🐝</span><h4>Apiculture</h4><p>Ruches entretenues pour favoriser la pollinisation et préserver la biodiversité locale.</p></div>
-    <div class="eco-card fade-in"><span class="eco-icon">👶</span><h4>Transmission</h4><p>Accueil régulier de classes et crèches pour partager la passion de la terre avec les plus jeunes.</p></div>
+    <div class="eco-card fade-in"><span class="eco-icon">☀️</span><h4>Énergie solaire</h4><p>Ferme autonome et neutre carbone. Surplus revendu à la SEFA voisine.</p></div>
+    <div class="eco-card fade-in"><span class="eco-icon">🪱</span><h4>Sols sans labour</h4><p>Taux de vie exceptionnel, comparé lors de la visite Parc Jura Vaudois (sept. 2024).</p></div>
+    <div class="eco-card fade-in"><span class="eco-icon">💧</span><h4>Eau naturelle</h4><p>Un cours d'eau traverse les terrains pour une alimentation naturelle.</p></div>
+    <div class="eco-card fade-in"><span class="eco-icon">🌳</span><h4>Agroforesterie</h4><p>Arbres et cultures associés pour maximiser la biodiversité.</p></div>
+    <div class="eco-card fade-in"><span class="eco-icon">♻️</span><h4>Circuit fermé</h4><p>Céréales → animaux → sols → céréales. Rien ne se perd.</p></div>
+    <div class="eco-card fade-in"><span class="eco-icon">🔬</span><h4>Tri haute précision</h4><p>Trieur optique dernière génération pour une qualité irréprochable.</p></div>
+    <div class="eco-card fade-in"><span class="eco-icon">🐝</span><h4>Apiculture</h4><p>Ruches entretenues pour favoriser la pollinisation locale.</p></div>
+    <div class="eco-card fade-in"><span class="eco-icon">👶</span><h4>Transmission</h4><p>Accueil de classes et crèches pour partager la passion de la terre.</p></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-grid">
     <div>
       <p class="section-label">Nous trouver</p>
       <h2 class="section-title">Venez nous <em>rendre visite</em></h2>
       <div class="visite-info">
-        <div class="visite-row">
-          <span class="visite-row-icon">📍</span>
-          <div>
-            <h4>Adresse</h4>
-            <p>Famille Walter Steiner<br>La Vignettaz 30 · 1174 Montherod<br>(Commune d'Aubonne)</p>
-          </div>
-        </div>
-        <div class="visite-row">
-          <span class="visite-row-icon">🗺️</span>
-          <div>
-            <h4>Comment arriver</h4>
-            <p>En arrivant depuis Aubonne, prenez le chemin de la Chaussée à gauche après l'église. La Vignette est la première ferme sur votre gauche.</p>
-          </div>
-        </div>
-        <div class="visite-row">
-          <span class="visite-row-icon">📞</span>
-          <div><h4>Téléphone</h4><p><a href="tel:0793598848">079 359 88 48</a></p></div>
-        </div>
-        <div class="visite-row">
-          <span class="visite-row-icon">✉️</span>
-          <div><h4>Email</h4><p><a href="mailto:steiner.montherod@bluewin.ch">steiner.montherod@bluewin.ch</a></p></div>
-        </div>
+        <div class="visite-row"><span class="visite-row-icon">📍</span><div><h4>Adresse</h4><p>Famille Walter Steiner<br>La Vignettaz 30 · 1174 Montherod<br>(Commune d'Aubonne)</p></div></div>
+        <div class="visite-row"><span class="visite-row-icon">🗺️</span><div><h4>Comment arriver</h4><p>Depuis Aubonne, chemin de la Chaussée à gauche après l'église. La Vignette est la première ferme sur votre gauche.</p></div></div>
+        <div class="visite-row"><span class="visite-row-icon">📞</span><div><h4>Téléphone</h4><p><a href="tel:0793598848">079 359 88 48</a></p></div></div>
+        <div class="visite-row"><span class="visite-row-icon">✉️</span><div><h4>Email</h4><p><a href="mailto:steiner.montherod@bluewin.ch">steiner.montherod@bluewin.ch</a></p></div></div>
       </div>
       <div class="hours-box">
         <h4>🏪 Magasin libre-service</h4>
         <div class="hours-row"><span>Lundi – Dimanche</span><span>7h00 – 22h00</span></div>
         <div class="hours-row"><span>Jours fériés</span><span>7h00 – 22h00</span></div>
-        <div class="hours-row" style="margin-top:0.5rem; border:none"><span style="color:rgba(245,240,232,0.4); font-size:0.78rem">Accès libre, sans rendez-vous</span></div>
       </div>
     </div>
     <div class="contact-photo fade-in">
-      <img src="images/FullSizeRender.jpeg" alt="Walter Steiner devant la ferme La Vignette">
+      <img src="images/FullSizeRender.jpeg" alt="Walter Steiner devant la ferme">
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div>© 2025 La Vignette · Famille Steiner · Montherod</div>
   <div>Ferme familiale · Agriculture régénérative · Vente directe</div>
